@@ -12,11 +12,11 @@ ui_page {
     'html/ui.html',
 }
 files {
-    'html/ui.html',
-    'html/css/style.css',
-    'html/js/jquery-3.3.1.js',
-	'html/js/app.js',
-    'html/js/base64.js',
+    	'html/ui.html',
+    	'html/css/style.css',
+    	'html/js/jquery-3.3.1.js',
+     	'html/js/app.js',
+    	'html/js/base64.js',
 	'html/img/arac1.jpg',
 	'html/img/arac2.jpg',
 	'html/img/arac3.jpg',
