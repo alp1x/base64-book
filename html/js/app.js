@@ -23,7 +23,7 @@
 
     document.onkeyup = function (data) {
         if (data.which == 27) { // Escape key
-            $.post('http://fsapigi-book/escape', JSON.stringify({}));
+            $.post('http://base64-book/escape', JSON.stringify({}));
             location.reload(true);
             $('body').addClass('hidden');
         }
