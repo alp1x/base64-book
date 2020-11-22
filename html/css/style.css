@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+.hidden {
+	display:none;
+}
+html, body {
+  height: 100%;
+  }
+
+::-webkit-scrollbar {width:12px}
+::-webkit-scrollbar-thumb {background: #222;}
+::-webkit-scrollbar-track {background: transparent}
+
+::selection {
+  background: #222;
+  color: white;
+  }
+::-moz-selection {
+  background: #222;
+  color: white;
+  }
+
+body * {
+  transform-style: preserve-3d; /* am i doing this wrong? */
+  }
+
+body {
+
+  color: #ffff;
+font-family: 'Montserrat', sans-serif;
+
+  perspective: 70em;/*in your face*/
+  }
+
+h1, p {
+  margin: 5% 0;
+  }
+
+.book {
+  height: 80%;
+  max-height: 500px;
+  min-height: 300px;
+  width: 600px;
+  background:rgb(37 41 44);
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  margin: auto;
+  
+  border: 10px solid rgb(196 151 7);
+  border-radius: 5px;
+  box-shadow: 0 0 150px hsla(170,0%,0%,.4);
+  }
+
+.page {
+  height: 100%;
+  width: 50%;
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: 0; right: 0;
+  transform-origin: 0 50%;
+  transition: .6s;
+  /*animation: unflip .3s linear;*/
+  }
+  [class*='side'] {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: violet;
+    background-image: url('../img/cover.jpg');
+    background-size: 100% 100%;
+    backface-visibility: hidden;
+    overflow: auto;
+    padding: 5% 8%;
+    }
+  .side-1 {
+    z-index: 2;
+   
+    transition: .5s;
+    }
+  .side-2 {
+    background-color: lightgreen;
+    transform:
+      rotateY(180deg);
+ 
+    }
+  .flipped > .side-1 {
+ 
+    transition: .6s;
+    }
+  .flipped > [class*='side'] {
+    pointer-events: auto;
+    }
+.page:after {
+  width: 100px;
+  height: 50px;
+  background-color: rgb(37 41 44);
+  position: absolute;
+  top: 0; bottom: 0; right: -100px;
+  margin: auto;
+  color: #fff;
+  font-weight:bold;
+  text-shadow: 0 -1px 0 #222;
+  line-height: 50px;
+  text-align: center;
+  font-family: monospace;
+  content: 'ileri';
+  animation: hide .8s linear;
+  }
+  .page.flipped:after {
+    content: 'geri';
+    transform:
+      rotateY(180deg);
+    pointer-events: auto;
+    }
+  /* to hide on flip animation */
+  @keyframes hide {
+    0% {opacity: 0;}
+    85% {opacity: 0;}
+    100% {opacity: 1;}
+    }
+.flipped {
+  transform:
+    rotateY(-180deg);
+  pointer-events: none;
+  /*animation: flip .3s linear;
+  animation-fill-mode: forwards;*/
+  }
+  
+.no-anim,
+  .no-anim:after {
+  animation: none;/* disable animation when page loads */
+  }
+@keyframes flip {
+  to {
+    transform:
+      rotateY(-180deg);    
+    }
+  }
+@keyframes unflip {
+  from {
+    transform:
+      rotateY(-180deg);    
+    }
+  to {
+    transform:
+      rotateY(0deg);    
+    }
+  }
+
+#earth {
+  width: 300px;
+  height: 300px;
+  margin: 20px 0 0 0px;
+  z-index:9999;
+  background: url(http://i58.tinypic.com/qq9503.jpg);
+  border-radius: 50%;
+  background-size: 610px;
+  box-shadow: inset 8px 36px 80px 36px rgb(0, 0, 0), inset -6px 0 12px 4px rgba(255, 255, 255, 0.3);
+  animation-name: rotate;
+  animation-duration: 12s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 610px 0px;
+  }
+}
+
+.close {
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.3;
+}
+.close:hover {
+  opacity: 1;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 14px;
+    content: ' ';
+    height: 27px;
+    top: 1px;
+    width: 2px;
+    background-color: rgb(0 0 0);
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.bitcoin {
+	padding: 5px;
+    width: 120px;
+    height: auto;
+    background: rgb(196 151 7);
+    border: 1px solid rgb(196 151 7);
+    color: rgb(255 255 255);
+    font-size: 1.2em;
+    border-radius: 10px;
+    font-weight: 300;
+}
+
+p.text {
+	background: rgb(0 0 0 / 23%);
+    color: rgb(255 255 255);
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+.cover {
+	position: absolute;
+    top: 41%;
+    padding: 10px;
+    left: 6%;
+}

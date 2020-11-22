@@ -1,0 +1,121 @@
+<html>
+<head>
+<title>Base64 - Book</title>
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body class="hidden">
+<div class='book'>  
+  <div id='page-1' class='page no-anim'>    
+    <div class='side-1' id='p1'>
+      <div class='content cover'>
+       <img src="https://i.hizliresim.com/MgQmvo.png">
+      </div><!-- .content -->
+    </div><!-- .side-1 -->    
+    <div class='side-2' id='p2' style="background-image: url(img/mekanik.jpg);">      
+      <div class='content'>
+    
+	<h1>Uranos Mekanik</h1>
+	   <p class="text">
+         Araç tutkunlarının vazgeçilmezi olan modifiyeler ve şaheserler yaratan mekanikler. Doğru söyleyelim ki, güzel bir mekaniğin elinden geçmiş araçlar hepimizin dikkatini çekmiştir. Baş döndüren efsaneler yaratmak ister misiniz ?
+
+        </p>
+       	<button class="bitcoin">400 <i class="fas fa-coins"></i></button>
+      </div><!-- .content -->
+    </div><!-- .side-2 -->
+  </div><!-- .page -->
+  
+  <div id='page-2' class='page no-anim'>    
+    <div class='side-1' id='p3' style="background-image: url(img/gun.jpg);">
+      <div class='content'>
+	  <h1>Uranos Silahçılık</h1>
+         <p class="text">
+          Metrelerce uzaktan bile kulağımızı çınlatan silahlara karşı bir ilginiz mi var, o zaman bu silahçılar resmen sizin için yapılmış. İçerisinde bir sürü silah var, üstelik legal atışda yapabiliyorsunuz. Daha ne istersiniz ki?
+        </p>
+		<button class="bitcoin">600 <i class="fas fa-coins"></i></button>
+      </div><!-- .content -->
+    </div><!-- .side-1 -->    
+    <div class='side-2' id='p4' style="background-image: url(img/emlak.jpg);">      
+      <div class='content'>
+        <h1>Uranos Emlak</h1>
+        <p class="text">
+       İnsanların hayallerindeki eve yaklaşmasında sizinde emeğiniz olsun ister misiniz? Emlakçı size hem bu yolda yardımcı olacak hemde geleceğe yapacağınız finansal yatırıma ortak olacaktır.
+        </p>
+	<button class="bitcoin">600 <i class="fas fa-coins"></i></button>
+      </div><!-- .content -->
+    </div><!-- .side-2 -->
+  </div><!-- #page-2 -->
+  
+  <div id='page-3' class='page no-anim'>    
+    <div class='side-1' id='p5' style="background-image: url(img/bahama.jpg);">
+      <div class='content'>
+        <h1>Bahamas Club</h1>
+        <p class="text">
+          İşten, stresten bıkmış insanların kafasını toplamak için geldiği adres siz olmak ister misiniz ? O zaman club sahibi olmak tam size göre. Hem insanları eğlendirin, hem kendinizi
+        </p>
+       	<button class="bitcoin">400 <i class="fas fa-coins"></i></button>
+      </div><!-- .content -->
+    </div><!-- .side-1 -->    
+    <div class='side-2' id='p6' style="background-image: url(img/arac1.jpg);">      
+      <div class='content'>
+
+
+      </div><!-- .content -->
+    </div><!-- .side-2 -->
+  </div><!-- #page-3 -->
+  
+  <div id='page-4' class='page no-anim'>    
+    <div class='side-1' id='p7' style="background-image: url(img/arac2.jpg);">
+      <div class='content'>
+
+      </div><!-- .content -->
+    </div><!-- .side-1 -->    
+    <div class='side-2' id='p8' style="background-image: url(img/arac3.jpg);">      
+      <div class='content'>
+
+      </div><!-- .content -->
+    </div><!-- .side-2 -->
+  </div><!-- #page-4 -->
+  
+    <div id='page-5' class='page no-anim'>    
+    <div class='side-1' id='p9' style="background-image: url(img/camaro.jpg);">
+      <div class='content'>
+
+      </div><!-- .content -->
+    </div><!-- .side-1 -->    
+    <div class='side-2' id='p10' style="    background: rgb(37 41 44);">      
+      <div class='content'>
+		<h1>Uranos Dergi</h1>
+		<p class="text">
+	Zaman ayırıp okuduğunuz için uranos dergi ekibi olarak sizlere teşekkür ederiz.
+</p>
+      </div><!-- .content -->
+    </div><!-- .side-2 -->
+  </div><!-- #page-4 -->
+  <div style="margin:10px;">
+  <h3>⚡Uranos Dergi Yazarları⚡</h3>
+  <p>base64</p>
+  <p>Semih</p>
+  <p>Egemen</p>
+  <p>Lyken</p>
+  <p>Oğulcan</p>
+  <h4>⚡ Online Mağaza ⚡</h4>
+  <h5>paybutik.net/shop/uranosroleplay</h5>
+
+  </div>
+  	<button class="close" onclick="kapat()"></button>
+</div>
+				<script src="js/jquery-3.3.1.js" type="text/javascript"></script>
+				<script src="js/fsapigibook.js" type="text/javascript"></script>
+				<script src="js/app.js" type="text/javascript"></script>
+				<script>
+ function kapat() {
+		    $.post('http://base64-book/escape', JSON.stringify({}));
+            $('body').addClass('hidden');
+        }
+</script>
+				
+		</body>
+		</html>
